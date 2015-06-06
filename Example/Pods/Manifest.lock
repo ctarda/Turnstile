@@ -1,0 +1,14 @@
+PODS:
+  - Turnstile (0.1.0)
+
+DEPENDENCIES:
+  - Turnstile (from `../`)
+
+EXTERNAL SOURCES:
+  Turnstile:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  Turnstile: 79a56e1ade790532858774e2b04ccbf51486c251
+
+COCOAPODS: 0.37.2

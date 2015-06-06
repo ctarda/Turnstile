@@ -13,8 +13,10 @@
 		607FACDB1AFB9204008FA782 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 607FACD91AFB9204008FA782 /* Main.storyboard */; };
 		607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDC1AFB9204008FA782 /* Images.xcassets */; };
 		607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 607FACDE1AFB9204008FA782 /* LaunchScreen.xib */; };
-		607FACEC1AFB9204008FA782 /* Tests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 607FACEB1AFB9204008FA782 /* Tests.swift */; };
 		9B26DF82F07B1C788D858B63 /* Pods_Turnstile_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C4B0CCF9D44A0F4E2463449C /* Pods_Turnstile_Example.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		D82559571B2311C700A85415 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82559541B2311C700A85415 /* EventTests.swift */; };
+		D82559581B2311C700A85415 /* StateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82559551B2311C700A85415 /* StateMachineTests.swift */; };
+		D82559591B2311C700A85415 /* StateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82559561B2311C700A85415 /* StateTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,14 +41,16 @@
 		607FACDA1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		607FACDC1AFB9204008FA782 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		607FACDF1AFB9204008FA782 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
-		607FACE51AFB9204008FA782 /* Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = Tests.xctest; path = Turnstile_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		607FACE51AFB9204008FA782 /* Turnstile_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Turnstile_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		72B3E61CC746ABEA3F1BFA54 /* Pods-Turnstile_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turnstile_Example.release.xcconfig"; path = "Pods/Target Support Files/Pods-Turnstile_Example/Pods-Turnstile_Example.release.xcconfig"; sourceTree = "<group>"; };
 		B79C843A5597FED9FEFF1B14 /* Pods_Turnstile_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turnstile_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4B0CCF9D44A0F4E2463449C /* Pods_Turnstile_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Turnstile_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C51D5078BF5F4DE80CCE13AA /* Turnstile.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Turnstile.podspec; path = ../Turnstile.podspec; sourceTree = "<group>"; };
 		CB5006E171547FE5901D2AE6 /* Pods-Turnstile_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Turnstile_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Turnstile_Example/Pods-Turnstile_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		D82559541B2311C700A85415 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
+		D82559551B2311C700A85415 /* StateMachineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachineTests.swift; sourceTree = "<group>"; };
+		D82559561B2311C700A85415 /* StateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACD01AFB9204008FA782 /* Turnstile_Example.app */,
-				607FACE51AFB9204008FA782 /* Tests.xctest */,
+				607FACE51AFB9204008FA782 /* Turnstile_Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -126,7 +130,9 @@
 		607FACE81AFB9204008FA782 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				607FACEB1AFB9204008FA782 /* Tests.swift */,
+				D82559541B2311C700A85415 /* EventTests.swift */,
+				D82559551B2311C700A85415 /* StateMachineTests.swift */,
+				D82559561B2311C700A85415 /* StateTests.swift */,
 				607FACE91AFB9204008FA782 /* Supporting Files */,
 			);
 			path = Tests;
@@ -200,7 +206,7 @@
 			);
 			name = Turnstile_Tests;
 			productName = Tests;
-			productReference = 607FACE51AFB9204008FA782 /* Tests.xctest */;
+			productReference = 607FACE51AFB9204008FA782 /* Turnstile_Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -367,7 +373,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				607FACEC1AFB9204008FA782 /* Tests.swift in Sources */,
+				D82559591B2311C700A85415 /* StateTests.swift in Sources */,
+				D82559571B2311C700A85415 /* EventTests.swift in Sources */,
+				D82559581B2311C700A85415 /* StateMachineTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +519,7 @@
 			baseConfigurationReference = 146E0B2786A6600E56E3ABB4 /* Pods-Turnstile_Tests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -522,6 +531,7 @@
 				INFOPLIST_FILE = Tests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Turnstile_Example.app/Turnstile_Example";
 			};
 			name = Debug;
@@ -531,6 +541,7 @@
 			baseConfigurationReference = 5C94CF7DA6C813A076FFF9FD /* Pods-Turnstile_Tests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
