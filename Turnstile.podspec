@@ -1,15 +1,7 @@
-#
-# Be sure to run `pod lib lint Turnstile.podspec' to ensure this is a
-# valid spec and remove all comments before submitting the spec.
-#
-# Any lines starting with a # are optional, but encouraged
-#
-# To learn more about a Podspec see http://guides.cocoapods.org/syntax/podspec.html
-#
 
 Pod::Spec.new do |s|
   s.name             = "Turnstile"
-  s.version          = "0.1.0"
+  s.version          = "1.0.0"
   s.summary          = "Turnstile is a lightweight implementation of a Finite State Machine in Swift."
   s.description      = <<-DESC
 Turnstile is a lightweight implementation of a [Finite State Machine](http://en.wikipedia.org/wiki/Finite-state_machine) in Swift.
@@ -23,7 +15,6 @@ Turnstile aims to be simple to use, while maintaning a clean API.
 Turnstile builds as a framework, and therefore needs iOS 8.
                        DESC
   s.homepage         = "https://github.com/ctarda/Turnstile"
-  # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "Cesar Tardaguila" => "cesar@ctarda.com" }
   s.source           = { :git => "https://github.com/ctarda/Turnstile.git", :tag => s.version.to_s }
@@ -37,7 +28,4 @@ Turnstile builds as a framework, and therefore needs iOS 8.
     'Turnstile' => ['Pod/Assets/*.png']
   }
 
-  # s.public_header_files = 'Pod/Classes/**/*.h'
-  # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
 end
