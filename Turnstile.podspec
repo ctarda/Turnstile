@@ -1,7 +1,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "Turnstile"
-  s.version          = "1.0.0"
+  s.version          = "0.1.0"
   s.summary          = "Turnstile is a lightweight implementation of a Finite State Machine in Swift."
   s.description      = <<-DESC
 Turnstile is a lightweight implementation of a [Finite State Machine](http://en.wikipedia.org/wiki/Finite-state_machine) in Swift.
