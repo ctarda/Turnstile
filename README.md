@@ -22,7 +22,7 @@ pod "Turnstile"
 
 ## Author
 
-Cesar Tardaguila, cesar@ctarda.com
+Cesar Tardaguila, https://twitter.com/ctarda
 
 ## License
 
