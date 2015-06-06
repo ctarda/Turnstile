@@ -1,9 +1,8 @@
 //
-//  States.swift
+//  RegularDay.swift
 //  Turnstile
 //
 //  Created by Cesar Tardaguila on 06/06/15.
-//  Copyright (c) 2015 CocoaPods. All rights reserved.
 //
 
 import Foundation

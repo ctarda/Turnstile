@@ -3,7 +3,6 @@
 //  Turnstile
 //
 //  Created by Cesar Tardaguila on 06/06/2015.
-//  Copyright (c) 06/06/2015 Cesar Tardaguila. All rights reserved.
 //
 
 import UIKit
