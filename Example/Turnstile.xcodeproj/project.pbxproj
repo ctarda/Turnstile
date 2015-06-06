@@ -17,6 +17,7 @@
 		D82559571B2311C700A85415 /* EventTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82559541B2311C700A85415 /* EventTests.swift */; };
 		D82559581B2311C700A85415 /* StateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82559551B2311C700A85415 /* StateMachineTests.swift */; };
 		D82559591B2311C700A85415 /* StateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82559561B2311C700A85415 /* StateTests.swift */; };
+		D82559671B23293900A85415 /* RegularDay.swift in Sources */ = {isa = PBXBuildFile; fileRef = D82559661B23293900A85415 /* RegularDay.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,7 @@
 		D82559541B2311C700A85415 /* EventTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTests.swift; sourceTree = "<group>"; };
 		D82559551B2311C700A85415 /* StateMachineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachineTests.swift; sourceTree = "<group>"; };
 		D82559561B2311C700A85415 /* StateTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateTests.swift; sourceTree = "<group>"; };
+		D82559661B23293900A85415 /* RegularDay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegularDay.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
 				607FACD71AFB9204008FA782 /* ViewController.swift */,
+				D82559661B23293900A85415 /* RegularDay.swift */,
 				607FACD91AFB9204008FA782 /* Main.storyboard */,
 				607FACDC1AFB9204008FA782 /* Images.xcassets */,
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
@@ -364,6 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D82559671B23293900A85415 /* RegularDay.swift in Sources */,
 				607FACD81AFB9204008FA782 /* ViewController.swift in Sources */,
 				607FACD61AFB9204008FA782 /* AppDelegate.swift in Sources */,
 			);
