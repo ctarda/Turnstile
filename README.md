@@ -14,6 +14,8 @@ Turnstile aims to be simple to use, while maintaning a clean API.
 
 Turnstile builds as a framework, and therefore needs iOS 8.
 
+Turnstile has been migrated to Swift 2, and therefore it requires Xcode 7.
+
 ## Usage
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
