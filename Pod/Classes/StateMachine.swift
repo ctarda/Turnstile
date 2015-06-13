@@ -28,7 +28,7 @@ public class StateMachine <T: Hashable> {
     }
     
     public func isExistingState(state: State<T>) -> Bool {
-        return contains(states, state)
+        return states.contains(state)
     }
     
     public func addState(state: State<T>) {
@@ -38,11 +38,11 @@ public class StateMachine <T: Hashable> {
     }
     
     public func addStates(states: [State<T>]) {
-        self.states.extend(states.filter({!contains(self.states, $0)}))
+        self.states.extend(states.filter({!self.states.contains($0)}))
     }
     
     public func isExistingEvent(event: Event<T>) -> Bool {
-        return contains(events, event)
+        return events.contains(event)
     }
     
     public func addEvent(event: Event<T>) {
@@ -52,7 +52,7 @@ public class StateMachine <T: Hashable> {
     }
     
     public func addEvents(events: [Event<T>]) {
-        self.events.extend(events.filter({!contains(self.events, $0)}))
+        self.events.extend(events.filter({!self.events.contains($0)}))
     }
     
     public func isInState(state:State<T>) -> Bool {
@@ -70,9 +70,6 @@ public class StateMachine <T: Hashable> {
     private func checkEventIntegrity(event: Event<T>) -> Bool {
         let sourceStates = event.sourceStates
         let destinationState = event.destinationState
-        
-        let isValidSource = checkStatesIntegrity(sourceStates)
-        let isValidDestination = isExistingState(destinationState)
         
         return isExistingState(destinationState) && checkStatesIntegrity(sourceStates)
     }
@@ -114,7 +111,7 @@ public class StateMachine <T: Hashable> {
             let sourceStates = event.sourceStates
             let destinationState = event.destinationState
             
-            if contains(sourceStates, currentState){
+            if sourceStates.contains(currentState){
                 activateState(destinationState)
                 
                 return .Completed

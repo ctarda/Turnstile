@@ -1,6 +1,5 @@
 # Turnstile
 
-[![CI Status](http://img.shields.io/travis/ctarda/Turnstile.svg?style=flat)](https://travis-ci.org/ctarda/Turnstile.svg?branch=master)
 [![Version](https://img.shields.io/cocoapods/v/Turnstile.svg?style=flat)](http://cocoapods.org/pods/Turnstile)
 [![License](https://img.shields.io/cocoapods/l/Turnstile.svg?style=flat)](http://cocoapods.org/pods/Turnstile)
 [![Platform](https://img.shields.io/cocoapods/p/Turnstile.svg?style=flat)](http://cocoapods.org/pods/Turnstile)
@@ -14,6 +13,8 @@ Turnstile is inspired by some of the existing open source implementations of Sta
 Turnstile aims to be simple to use, while maintaning a clean API.
 
 Turnstile builds as a framework, and therefore needs iOS 8.
+
+Turnstile has been migrated to Swift 2, and therefore it requires Xcode 7.
 
 ## Usage
 
