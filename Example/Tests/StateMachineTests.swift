@@ -113,7 +113,6 @@ class StateMachineTests: XCTestCase {
     func testStateMachineCanNotStartIfThereAreNoEventsLinkingStates() {
         let twoStatesMachine = StateMachine(initialState: Constants.state1)
         twoStatesMachine.addState(Constants.state2)
-        let notValidEvent = Event(name: Constants.stringDiff, sourceStates: [Constants.state1], destinationState: Constants.state3)
         
         let isStarted = twoStatesMachine.start()
         
@@ -142,7 +141,7 @@ class StateMachineTests: XCTestCase {
     func testFireEventFailsTransitionWhenStateMachineIsNotInDestionationState() {
         let event = Event(name: Constants.stringDiff, sourceStates: [Constants.state3], destinationState: Constants.state1)
         stateMachine?.addEvent(event)
-        let isStarted = stateMachine!.start()
+        stateMachine!.start()
         
         let transitionResult = stateMachine!.fireEvent(event)
         
@@ -176,7 +175,7 @@ class StateMachineTests: XCTestCase {
         oneStateMachine.addState(state2)
         oneStateMachine.addEvent(event)
         
-        let isStarted = oneStateMachine.start()
+        oneStateMachine.start()
         
         oneStateMachine.fireEvent(event)
         
@@ -193,7 +192,7 @@ class StateMachineTests: XCTestCase {
         oneStateMachine.addState(state2)
         oneStateMachine.addEvent(event)
         
-        let isStarted = oneStateMachine.start()
+        oneStateMachine.start()
         
         oneStateMachine.fireEvent(event)
         
@@ -211,7 +210,7 @@ class StateMachineTests: XCTestCase {
         oneStateMachine.addState(state2)
         oneStateMachine.addEvent(event)
         
-        let isStarted = oneStateMachine.start()
+        oneStateMachine.start()
         
         oneStateMachine.fireEvent(event)
         
@@ -229,7 +228,7 @@ class StateMachineTests: XCTestCase {
         oneStateMachine.addState(state2)
         oneStateMachine.addEvent(event)
         
-        let isStarted = oneStateMachine.start()
+        oneStateMachine.start()
         
         oneStateMachine.fireEvent(event)
         

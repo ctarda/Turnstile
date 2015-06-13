@@ -71,9 +71,6 @@ public class StateMachine <T: Hashable> {
         let sourceStates = event.sourceStates
         let destinationState = event.destinationState
         
-        let isValidSource = checkStatesIntegrity(sourceStates)
-        let isValidDestination = isExistingState(destinationState)
-        
         return isExistingState(destinationState) && checkStatesIntegrity(sourceStates)
     }
     
