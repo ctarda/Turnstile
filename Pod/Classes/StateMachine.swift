@@ -24,7 +24,7 @@ public class StateMachine <T: Hashable> {
     convenience public init(initialState: State<T>, states: [State<T>])
     {
         self.init(initialState: initialState)
-        self.states.extend(states)
+        self.states.appendContentsOf(states)
     }
     
     public func isExistingState(state: State<T>) -> Bool {
@@ -38,7 +38,7 @@ public class StateMachine <T: Hashable> {
     }
     
     public func addStates(states: [State<T>]) {
-        self.states.extend(states.filter({!self.states.contains($0)}))
+        self.states.appendContentsOf(states.filter({!self.states.contains($0)}))
     }
     
     public func isExistingEvent(event: Event<T>) -> Bool {
@@ -52,7 +52,7 @@ public class StateMachine <T: Hashable> {
     }
     
     public func addEvents(events: [Event<T>]) {
-        self.events.extend(events.filter({!self.events.contains($0)}))
+        self.events.appendContentsOf(events.filter({!self.events.contains($0)}))
     }
     
     public func isInState(state:State<T>) -> Bool {
