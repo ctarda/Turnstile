@@ -16,17 +16,29 @@ Turnstile builds as a framework, and therefore needs iOS 8.
 
 Turnstile has been migrated to Swift 2, and therefore it requires Xcode 7.
 
-## Usage
-
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
 ## Installation
+If you want to install Turnstile manually just include all the Swift files in Sources/Turnstile in your project.
 
 Turnstile is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
 
 ```ruby
-pod "Turnstile"
+use frameworks!
+pod 'Turnstile'
+```
+
+If you use the Swift Package Manager, add it to the dependencies of your Package.swift file:
+
+```ruby
+import PackageDescription
+
+let package = Package(
+    //
+    dependencies: [
+        //
+        .Package(url: "https://github.com/ctarda/Turnstile.git", majorVersion: 1, minor: 1)
+    ]
+)
 ```
 
 ## Author
