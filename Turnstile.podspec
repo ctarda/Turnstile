@@ -16,8 +16,8 @@ Turnstile builds as a framework, and therefore needs iOS 8.
                        DESC
   s.homepage         = "https://github.com/ctarda/Turnstile"
   s.license          = { type: "MIT", file: "LICENSE" }
-  s.author           = { "Cesar Tardaguila" => "cesar@ctarda.com" }
-  s.source           = { :git => "https://github.com/ctarda/Turnstile.git", :tag => s.version.to_s }
+  s.author           = "Cesar Tardaguila"
+  s.source           = { git: "https://github.com/ctarda/Turnstile.git", tag: "v#{s.version}" }
   s.social_media_url = 'https://twitter.com/ctarda'
 
   s.ios.deployment_target = "8.0"
