@@ -248,12 +248,12 @@ class StateMachineTests: XCTestCase {
         return sut
     }
     
-    func testMachineTansitionIsNotAllowedIfItsNotRunning() {
+    func testMachineTransitionIsNotAllowedIfItsNotRunning() {
         let sut = partialStateMachine()
         XCTAssertFalse(sut.canTransitionTo(Constants.state2), "Transitions are allowed only on running state machines")
     }
 
-    func testMachineTansitionIsNotAllowedToInexistantStates() {
+    func testMachineTransitionIsNotAllowedToInexistantStates() {
         let sut = partialStateMachine()
         let state4 = State(value: Constants.stringDiff)
         sut.start()
@@ -270,6 +270,5 @@ class StateMachineTests: XCTestCase {
         let sut = partialStateMachine()
         sut.start()
         XCTAssertFalse(sut.canTransitionTo(Constants.state3), "A transition is not allowed if we are in the source state none event that transition to destination state")
-    }
-    
+    }    
 }
