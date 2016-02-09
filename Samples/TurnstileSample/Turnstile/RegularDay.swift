@@ -53,7 +53,7 @@ final class RegularDay {
     }
     
     func canGetUp() -> Bool {
-        return stateMachine.canTransitionTo(States.grumpyNotSleepingButYetNotAwake)
+        return stateMachine.canFireEvent(Transitions.alarmRings)
     }
 
     func getUp() {
@@ -61,7 +61,7 @@ final class RegularDay {
     }
     
     func canBrewTea() -> Bool {
-        return stateMachine.canTransitionTo(States.notSoGrumpyAndAwake)
+        return stateMachine.canFireEvent(Transitions.teaIsReady)
     }
     
     func brewTea() {
@@ -69,7 +69,7 @@ final class RegularDay {
     }
     
     func canGoToWork() -> Bool {
-        return stateMachine.canTransitionTo(States.totallyGrumpy)
+        return stateMachine.canFireEvent(Transitions.timeToLeaveForWork)
     }
     
     func goToWork() {
@@ -77,6 +77,7 @@ final class RegularDay {
     }
     
     func canFleeOffice() -> Bool {
+        // Can determine if an event could be fire using the destination State<T> as argument
         return stateMachine.canTransitionTo(States.totallyHappyLifeIsAwesome)
     }
     
