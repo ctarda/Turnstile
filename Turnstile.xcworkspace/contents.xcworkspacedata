@@ -4,4 +4,7 @@
    <FileRef
       location = "group:Turnstile.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:Samples/TurnstileSample/TurnstileSample.xcodeproj">
+   </FileRef>
 </Workspace>
