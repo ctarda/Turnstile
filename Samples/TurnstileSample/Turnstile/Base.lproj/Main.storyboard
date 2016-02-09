@@ -17,14 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pL3-C7-q1W">
-                                <rect key="frame" x="90" y="40" width="360" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pL3-C7-q1W">
+                                <rect key="frame" x="279" y="40" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UW-FG-A2T">
-                                <rect key="frame" x="263" y="88" width="74" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8UW-FG-A2T">
+                                <rect key="frame" x="264" y="88" width="73" height="30"/>
                                 <state key="normal" title="Ring alarm">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -32,8 +32,8 @@
                                     <action selector="ringAlarm:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="CyW-AD-C3g"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jp-6j-Rc9">
-                                <rect key="frame" x="263" y="126" width="74" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Jp-6j-Rc9">
+                                <rect key="frame" x="270" y="126" width="61" height="30"/>
                                 <state key="normal" title="Brew tea">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -41,8 +41,8 @@
                                     <action selector="brewTea:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="9CX-Jw-RfF"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cl-2j-2ka">
-                                <rect key="frame" x="263" y="164" width="76" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Cl-2j-2ka">
+                                <rect key="frame" x="263" y="164" width="75" height="30"/>
                                 <state key="normal" title="Go to work">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -50,8 +50,8 @@
                                     <action selector="goToWork:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="T43-BS-Nqb"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxY-j2-yoJ">
-                                <rect key="frame" x="263" y="202" width="71" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NxY-j2-yoJ">
+                                <rect key="frame" x="264" y="202" width="72" height="30"/>
                                 <state key="normal" title="Flee office">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -68,10 +68,10 @@
                             <constraint firstAttribute="centerX" secondItem="8UW-FG-A2T" secondAttribute="centerX" id="OeC-YJ-srs"/>
                             <constraint firstItem="NxY-j2-yoJ" firstAttribute="top" secondItem="2Cl-2j-2ka" secondAttribute="bottom" constant="8" id="PZB-LS-8Tv"/>
                             <constraint firstItem="6Jp-6j-Rc9" firstAttribute="top" secondItem="8UW-FG-A2T" secondAttribute="bottom" constant="8" id="eo2-NH-0Ub"/>
-                            <constraint firstAttribute="centerX" secondItem="2Cl-2j-2ka" secondAttribute="centerX" constant="-1" id="f2o-4F-pUe"/>
-                            <constraint firstAttribute="centerX" secondItem="NxY-j2-yoJ" secondAttribute="centerX" constant="1.5" id="fYz-TC-GvR"/>
+                            <constraint firstAttribute="centerX" secondItem="2Cl-2j-2ka" secondAttribute="centerX" id="f2o-4F-pUe"/>
+                            <constraint firstAttribute="centerX" secondItem="NxY-j2-yoJ" secondAttribute="centerX" id="fYz-TC-GvR"/>
                             <constraint firstAttribute="centerX" secondItem="6Jp-6j-Rc9" secondAttribute="centerX" id="hvb-jE-Nfg"/>
-                            <constraint firstAttribute="centerX" secondItem="pL3-C7-q1W" secondAttribute="centerX" constant="30" id="sxk-Ao-iPd"/>
+                            <constraint firstAttribute="centerX" secondItem="pL3-C7-q1W" secondAttribute="centerX" id="sxk-Ao-iPd"/>
                             <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="pL3-C7-q1W" secondAttribute="bottom" constant="539" id="ukm-uT-3c3"/>
                         </constraints>
                     </view>
