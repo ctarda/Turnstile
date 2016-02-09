@@ -74,6 +74,13 @@ public class StateMachine <T: Hashable> {
         return false
     }
     
+    public func canFireEvent(event: Event<T>) -> Bool {
+        guard running && isExistingEvent(event) else {
+            return false
+        }
+        return event.sourceStates.contains(currentState)
+    }
+    
     private func checkMachineIntegrity() -> Bool {
         return checkStateCount() && checkEventCount() && checkEventsIntegrity()
     }

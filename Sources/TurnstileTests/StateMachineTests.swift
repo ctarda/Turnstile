@@ -236,14 +236,10 @@ class StateMachineTests: XCTestCase {
     }
     
     func partialStateMachine() -> StateMachine<String> {
-        let state1 = Constants.state1
-        let state2 = Constants.state2
-        let state3 = Constants.state3
-        let event12 = Event(name: Constants.stringDiff, sourceStates: [state1], destinationState: state2)
-        let sut = StateMachine(initialState: state1)
-        sut.addState(state2)
-        sut.addState(state3)
-        sut.addEvent(event12)
+        let sut = StateMachine(initialState: Constants.state1)
+        sut.addState(Constants.state2)
+        sut.addState(Constants.state3)
+        sut.addEvent(Constants.event1)
 
         return sut
     }
@@ -270,5 +266,31 @@ class StateMachineTests: XCTestCase {
         let sut = partialStateMachine()
         sut.start()
         XCTAssertFalse(sut.canTransitionTo(Constants.state3), "A transition is not allowed if we are in the source state none event that transition to destination state")
-    }    
+    }
+    
+    func testCanFireEventAlwaysReturnFalseWhenNotRunning() {
+        let sut = partialStateMachine()
+        XCTAssertFalse(sut.canFireEvent(Constants.event1), "Transitions are allowed only on running state machines")
+    }
+
+    func testMachineCanNotFireNonExistantEvents() {
+        let sut = partialStateMachine()
+        let event32 = Event(name: Constants.stringDiff, sourceStates: [Constants.state3], destinationState: Constants.state2)
+        sut.start()
+        XCTAssertFalse(sut.canFireEvent(event32), "Inexistant events can't be fired")
+    }
+    
+    func testMachineCanFireEventsFromSourceState() {
+        let sut = partialStateMachine()
+        sut.start()
+        XCTAssertTrue(sut.canFireEvent(Constants.event1), "Can fire event from source state")
+    }
+    
+    func testMachineCanNotFireEventsFromOtherState() {
+        let sut = partialStateMachine()
+        sut.start()
+        sut.fireEvent(Constants.event1)
+        XCTAssertFalse(sut.canFireEvent(Constants.event1), "Can't fire event from a state that is not part of the event's sourceStates ")
+    }
+
 }
