@@ -1,5 +1,6 @@
 # Turnstile
 [![Build Status](https://travis-ci.org/ctarda/Turnstile.svg?branch=master)](https://travis-ci.org/ctarda/Turnstile)
+[![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Version](https://img.shields.io/cocoapods/v/Turnstile.svg?style=flat)](http://cocoapods.org/pods/Turnstile)
 [![License](https://img.shields.io/cocoapods/l/Turnstile.svg?style=flat)](http://cocoapods.org/pods/Turnstile)
 [![Platform](https://img.shields.io/cocoapods/p/Turnstile.svg?style=flat)](http://cocoapods.org/pods/Turnstile)
@@ -25,6 +26,11 @@ it, simply add the following line to your Podfile:
 ```ruby
 use frameworks!
 pod 'Turnstile'
+```
+
+If you use Carthage, add to your Cartfile:
+```ruby
+github "ctarda/Turnstile"
 ```
 
 If you use the Swift Package Manager, add it to the dependencies of your Package.swift file:
