@@ -1,5 +1,5 @@
 # Turnstile
-
+[![Build Status](https://travis-ci.org/ctarda/Turnstile.svg?branch=master)](https://travis-ci.org/ctarda/Turnstile)
 [![Version](https://img.shields.io/cocoapods/v/Turnstile.svg?style=flat)](http://cocoapods.org/pods/Turnstile)
 [![License](https://img.shields.io/cocoapods/l/Turnstile.svg?style=flat)](http://cocoapods.org/pods/Turnstile)
 [![Platform](https://img.shields.io/cocoapods/p/Turnstile.svg?style=flat)](http://cocoapods.org/pods/Turnstile)
