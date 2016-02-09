@@ -41,6 +41,9 @@ let package = Package(
 )
 ```
 
+## Usage
+The project includes a sample app.
+
 ## Author
 
 Cesar Tardaguila, https://twitter.com/ctarda
