@@ -52,16 +52,32 @@ final class RegularDay {
         stateMachine.start()
     }
     
+    func canGetUp() -> Bool {
+        return stateMachine.canTransitionTo(States.grumpyNotSleepingButYetNotAwake)
+    }
+
     func getUp() {
         stateMachine.fireEvent(Transitions.alarmRings)
+    }
+    
+    func canBrewTea() -> Bool {
+        return stateMachine.canTransitionTo(States.notSoGrumpyAndAwake)
     }
     
     func brewTea() {
         stateMachine.fireEvent(Transitions.teaIsReady)
     }
     
+    func canGoToWork() -> Bool {
+        return stateMachine.canTransitionTo(States.totallyGrumpy)
+    }
+    
     func goToWork() {
         stateMachine.fireEvent(Transitions.timeToLeaveForWork)
+    }
+    
+    func canFleeOffice() -> Bool {
+        return stateMachine.canTransitionTo(States.totallyHappyLifeIsAwesome)
     }
     
     func fleeOffice() {
