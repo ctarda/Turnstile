@@ -235,4 +235,41 @@ class StateMachineTests: XCTestCase {
         XCTAssertTrue(stateEntered, "The state machine will run the proper closure after exiting a state")
     }
     
+    func partialStateMachine() -> StateMachine<String> {
+        let state1 = Constants.state1
+        let state2 = Constants.state2
+        let state3 = Constants.state3
+        let event12 = Event(name: Constants.stringDiff, sourceStates: [state1], destinationState: state2)
+        let sut = StateMachine(initialState: state1)
+        sut.addState(state2)
+        sut.addState(state3)
+        sut.addEvent(event12)
+
+        return sut
+    }
+    
+    func testMachineTansitionIsNotAllowedIfItsNotRunning() {
+        let sut = partialStateMachine()
+        XCTAssertFalse(sut.canTransitionTo(Constants.state2), "Transitions are allowed only on running state machines")
+    }
+
+    func testMachineTansitionIsNotAllowedToInexistantStates() {
+        let sut = partialStateMachine()
+        let state4 = State(value: Constants.stringDiff)
+        sut.start()
+        XCTAssertFalse(sut.canTransitionTo(state4), "If the destination state is not configured into the state machine, the transition is not allowed")
+    }
+        
+    func testMachineCanSayIfATransitionIsCurrentlyAllowed() {
+        let sut = partialStateMachine()
+        sut.start()
+        XCTAssertTrue(sut.canTransitionTo(Constants.state2), "A transition is allowed if we are in the source state of some event that transition to destination state")
+    }
+    
+    func testMachineCanSayIfATransitionIsCurrentlyNotAllowed() {
+        let sut = partialStateMachine()
+        sut.start()
+        XCTAssertFalse(sut.canTransitionTo(Constants.state3), "A transition is not allowed if we are in the source state none event that transition to destination state")
+    }
+    
 }
