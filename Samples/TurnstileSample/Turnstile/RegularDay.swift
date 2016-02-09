@@ -10,6 +10,10 @@ import UIKit
 
 import Turnstile
 
+public protocol RegularDayObserver {
+    func newEvent(message: String)
+}
+
 final class RegularDay {
     
     private struct States {
@@ -28,11 +32,11 @@ final class RegularDay {
         
     }
     
-    let feedbackLabel: UILabel
+    let observer: RegularDayObserver
     let stateMachine: StateMachine<String>
     
-    init(feedbackLabel: UILabel) {
-        self.feedbackLabel = feedbackLabel
+    init(observer: RegularDayObserver) {
+        self.observer = observer
         stateMachine = StateMachine(initialState: States.sleepState, states: [States.grumpyNotSleepingButYetNotAwake, States.notSoGrumpyAndAwake, States.totallyGrumpy, States.totallyHappyLifeIsAwesome])
         
         setupStateMachine()
@@ -41,11 +45,11 @@ final class RegularDay {
     private func setupStateMachine() {
         stateMachine.addEvents([Transitions.alarmRings, Transitions.teaIsReady, Transitions.timeToLeaveForWork, Transitions.timeToPlay])
         
-        States.sleepState.didEnterState = {state in self.feedbackLabel.text = "Zzzzzzzzzzz"}
-        States.grumpyNotSleepingButYetNotAwake.didEnterState = {state in self.feedbackLabel.text = "In need my tea..."}
-        States.notSoGrumpyAndAwake.didEnterState = {state in self.feedbackLabel.text = "Meh"}
-        States.totallyGrumpy.didEnterState = {state in self.feedbackLabel.text = "Android, LOL!"}
-        States.totallyHappyLifeIsAwesome.didEnterState = {state in self.feedbackLabel.text = "Oh, look! A unicorn!"}
+        States.sleepState.didEnterState = {state in self.observer.newEvent("Zzzzzzzzzzz") }
+        States.grumpyNotSleepingButYetNotAwake.didEnterState = {state in self.observer.newEvent("In need my tea...")}
+        States.notSoGrumpyAndAwake.didEnterState = {state in self.observer.newEvent("Meh")}
+        States.totallyGrumpy.didEnterState = {state in self.observer.newEvent("Android, LOL!")}
+        States.totallyHappyLifeIsAwesome.didEnterState = {state in self.observer.newEvent("Oh, look! A unicorn!")}
     }
     
     func start() {
