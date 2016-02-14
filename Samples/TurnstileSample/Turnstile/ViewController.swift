@@ -7,12 +7,16 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, RegularDayObserver {
     
     @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var ringAlarmButton: UIButton!
+    @IBOutlet weak var brewTeaButton: UIButton!
+    @IBOutlet weak var goToWorkButton: UIButton!
+    @IBOutlet weak var fleeOfficeButton: UIButton!
     
     private final lazy var myDay: RegularDay = {
-        return RegularDay(feedbackLabel: self.status)
+        return RegularDay(observer: self)
     }()
     
     @IBAction func ringAlarm(sender: AnyObject) {
@@ -35,6 +39,14 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         myDay.start()
+    }
+    
+    func newEvent(message: String) {
+        status?.text = message
+        ringAlarmButton?.enabled = myDay.canGetUp()
+        brewTeaButton?.enabled = myDay.canBrewTea()
+        goToWorkButton?.enabled = myDay.canGoToWork()
+        fleeOfficeButton?.enabled = myDay.canFleeOffice()
     }
 }
 
