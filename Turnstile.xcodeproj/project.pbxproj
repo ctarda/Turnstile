@@ -16,6 +16,21 @@
 		D821C5331C68A80B00A88B65 /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C52F1C68A80B00A88B65 /* StateMachine.swift */; };
 		D821C5341C68A80B00A88B65 /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C5301C68A80B00A88B65 /* Transition.swift */; };
 		D821C5361C68A90600A88B65 /* Turnstile.h in Headers */ = {isa = PBXBuildFile; fileRef = D821C5351C68A90600A88B65 /* Turnstile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8A7D8611C7D3B9500A2981D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C52D1C68A80B00A88B65 /* Event.swift */; };
+		D8A7D8621C7D3B9500A2981D /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C52F1C68A80B00A88B65 /* StateMachine.swift */; };
+		D8A7D8631C7D3B9500A2981D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C5301C68A80B00A88B65 /* Transition.swift */; };
+		D8A7D8641C7D3B9500A2981D /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C52E1C68A80B00A88B65 /* State.swift */; };
+		D8A7D8671C7D3B9500A2981D /* Turnstile.h in Headers */ = {isa = PBXBuildFile; fileRef = D821C5351C68A90600A88B65 /* Turnstile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8A7D8701C7D3D3800A2981D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C52D1C68A80B00A88B65 /* Event.swift */; };
+		D8A7D8711C7D3D3800A2981D /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C52F1C68A80B00A88B65 /* StateMachine.swift */; };
+		D8A7D8721C7D3D3800A2981D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C5301C68A80B00A88B65 /* Transition.swift */; };
+		D8A7D8731C7D3D3800A2981D /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C52E1C68A80B00A88B65 /* State.swift */; };
+		D8A7D8761C7D3D3800A2981D /* Turnstile.h in Headers */ = {isa = PBXBuildFile; fileRef = D821C5351C68A90600A88B65 /* Turnstile.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D8A7D87F1C7D3DE200A2981D /* Event.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C52D1C68A80B00A88B65 /* Event.swift */; };
+		D8A7D8801C7D3DE200A2981D /* StateMachine.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C52F1C68A80B00A88B65 /* StateMachine.swift */; };
+		D8A7D8811C7D3DE200A2981D /* Transition.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C5301C68A80B00A88B65 /* Transition.swift */; };
+		D8A7D8821C7D3DE200A2981D /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = D821C52E1C68A80B00A88B65 /* State.swift */; };
+		D8A7D8851C7D3DE200A2981D /* Turnstile.h in Headers */ = {isa = PBXBuildFile; fileRef = D821C5351C68A90600A88B65 /* Turnstile.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +56,9 @@
 		D821C52F1C68A80B00A88B65 /* StateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StateMachine.swift; path = Sources/Turnstile/StateMachine.swift; sourceTree = SOURCE_ROOT; };
 		D821C5301C68A80B00A88B65 /* Transition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Transition.swift; path = Sources/Turnstile/Transition.swift; sourceTree = SOURCE_ROOT; };
 		D821C5351C68A90600A88B65 /* Turnstile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Turnstile.h; path = Sources/Turnstile/Turnstile.h; sourceTree = SOURCE_ROOT; };
+		D8A7D86C1C7D3B9500A2981D /* Turnstile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Turnstile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8A7D87B1C7D3D3800A2981D /* Turnstile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Turnstile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8A7D88A1C7D3DE200A2981D /* Turnstile.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Turnstile.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +74,27 @@
 			buildActionMask = 2147483647;
 			files = (
 				D821C5181C68A6C200A88B65 /* Turnstile.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A7D8651C7D3B9500A2981D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A7D8741C7D3D3800A2981D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A7D8831C7D3DE200A2981D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,6 +115,9 @@
 			children = (
 				D821C50D1C68A6C200A88B65 /* Turnstile.framework */,
 				D821C5171C68A6C200A88B65 /* TurnstileTests.xctest */,
+				D8A7D86C1C7D3B9500A2981D /* Turnstile.framework */,
+				D8A7D87B1C7D3D3800A2981D /* Turnstile.framework */,
+				D8A7D88A1C7D3DE200A2981D /* Turnstile.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -115,12 +157,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8A7D8661C7D3B9500A2981D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A7D8671C7D3B9500A2981D /* Turnstile.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A7D8751C7D3D3800A2981D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A7D8761C7D3D3800A2981D /* Turnstile.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A7D8841C7D3DE200A2981D /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A7D8851C7D3DE200A2981D /* Turnstile.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		D821C50C1C68A6C200A88B65 /* Turnstile */ = {
+		D821C50C1C68A6C200A88B65 /* Turnstile-iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D821C5211C68A6C200A88B65 /* Build configuration list for PBXNativeTarget "Turnstile" */;
+			buildConfigurationList = D821C5211C68A6C200A88B65 /* Build configuration list for PBXNativeTarget "Turnstile-iOS" */;
 			buildPhases = (
 				D821C5081C68A6C200A88B65 /* Sources */,
 				D821C5091C68A6C200A88B65 /* Frameworks */,
@@ -131,7 +197,7 @@
 			);
 			dependencies = (
 			);
-			name = Turnstile;
+			name = "Turnstile-iOS";
 			productName = Turnstile;
 			productReference = D821C50D1C68A6C200A88B65 /* Turnstile.framework */;
 			productType = "com.apple.product-type.framework";
@@ -153,6 +219,60 @@
 			productName = TurnstileTests;
 			productReference = D821C5171C68A6C200A88B65 /* TurnstileTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D8A7D85F1C7D3B9500A2981D /* Turnstile-tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8A7D8691C7D3B9500A2981D /* Build configuration list for PBXNativeTarget "Turnstile-tvOS" */;
+			buildPhases = (
+				D8A7D8601C7D3B9500A2981D /* Sources */,
+				D8A7D8651C7D3B9500A2981D /* Frameworks */,
+				D8A7D8661C7D3B9500A2981D /* Headers */,
+				D8A7D8681C7D3B9500A2981D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Turnstile-tvOS";
+			productName = Turnstile;
+			productReference = D8A7D86C1C7D3B9500A2981D /* Turnstile.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D8A7D86E1C7D3D3800A2981D /* Turnstile-watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8A7D8781C7D3D3800A2981D /* Build configuration list for PBXNativeTarget "Turnstile-watchOS" */;
+			buildPhases = (
+				D8A7D86F1C7D3D3800A2981D /* Sources */,
+				D8A7D8741C7D3D3800A2981D /* Frameworks */,
+				D8A7D8751C7D3D3800A2981D /* Headers */,
+				D8A7D8771C7D3D3800A2981D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Turnstile-watchOS";
+			productName = Turnstile;
+			productReference = D8A7D87B1C7D3D3800A2981D /* Turnstile.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D8A7D87D1C7D3DE200A2981D /* Turnstile-OSX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D8A7D8871C7D3DE200A2981D /* Build configuration list for PBXNativeTarget "Turnstile-OSX" */;
+			buildPhases = (
+				D8A7D87E1C7D3DE200A2981D /* Sources */,
+				D8A7D8831C7D3DE200A2981D /* Frameworks */,
+				D8A7D8841C7D3DE200A2981D /* Headers */,
+				D8A7D8861C7D3DE200A2981D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Turnstile-OSX";
+			productName = Turnstile;
+			productReference = D8A7D88A1C7D3DE200A2981D /* Turnstile.framework */;
+			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
 
@@ -184,8 +304,11 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				D821C50C1C68A6C200A88B65 /* Turnstile */,
+				D821C50C1C68A6C200A88B65 /* Turnstile-iOS */,
 				D821C5161C68A6C200A88B65 /* TurnstileTests */,
+				D8A7D85F1C7D3B9500A2981D /* Turnstile-tvOS */,
+				D8A7D86E1C7D3D3800A2981D /* Turnstile-watchOS */,
+				D8A7D87D1C7D3DE200A2981D /* Turnstile-OSX */,
 			);
 		};
 /* End PBXProject section */
@@ -199,6 +322,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		D821C5151C68A6C200A88B65 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A7D8681C7D3B9500A2981D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A7D8771C7D3D3800A2981D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A7D8861C7D3DE200A2981D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -229,12 +373,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D8A7D8601C7D3B9500A2981D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A7D8611C7D3B9500A2981D /* Event.swift in Sources */,
+				D8A7D8621C7D3B9500A2981D /* StateMachine.swift in Sources */,
+				D8A7D8631C7D3B9500A2981D /* Transition.swift in Sources */,
+				D8A7D8641C7D3B9500A2981D /* State.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A7D86F1C7D3D3800A2981D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A7D8701C7D3D3800A2981D /* Event.swift in Sources */,
+				D8A7D8711C7D3D3800A2981D /* StateMachine.swift in Sources */,
+				D8A7D8721C7D3D3800A2981D /* Transition.swift in Sources */,
+				D8A7D8731C7D3D3800A2981D /* State.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D8A7D87E1C7D3DE200A2981D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D8A7D87F1C7D3DE200A2981D /* Event.swift in Sources */,
+				D8A7D8801C7D3DE200A2981D /* StateMachine.swift in Sources */,
+				D8A7D8811C7D3DE200A2981D /* Transition.swift in Sources */,
+				D8A7D8821C7D3DE200A2981D /* State.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		D821C51A1C68A6C200A88B65 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = D821C50C1C68A6C200A88B65 /* Turnstile */;
+			target = D821C50C1C68A6C200A88B65 /* Turnstile-iOS */;
 			targetProxy = D821C5191C68A6C200A88B65 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -341,9 +518,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctarda.Turnstile;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Turnstile;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -359,8 +537,9 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.ctarda.Turnstile;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = Turnstile;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -387,6 +566,123 @@
 			};
 			name = Release;
 		};
+		D8A7D86A1C7D3B9500A2981D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Turnstile/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ctarda.Turnstile;
+				PRODUCT_NAME = Turnstile;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Debug;
+		};
+		D8A7D86B1C7D3B9500A2981D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Turnstile/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ctarda.Turnstile;
+				PRODUCT_NAME = Turnstile;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 3;
+			};
+			name = Release;
+		};
+		D8A7D8791C7D3D3800A2981D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Turnstile/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ctarda.Turnstile;
+				PRODUCT_NAME = Turnstile;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Debug;
+		};
+		D8A7D87A1C7D3D3800A2981D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Turnstile/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ctarda.Turnstile;
+				PRODUCT_NAME = Turnstile;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+			};
+			name = Release;
+		};
+		D8A7D8881C7D3DE200A2981D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Turnstile/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ctarda.Turnstile;
+				PRODUCT_NAME = Turnstile;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D8A7D8891C7D3DE200A2981D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Sources/Turnstile/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ctarda.Turnstile;
+				PRODUCT_NAME = Turnstile;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -399,7 +695,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		D821C5211C68A6C200A88B65 /* Build configuration list for PBXNativeTarget "Turnstile" */ = {
+		D821C5211C68A6C200A88B65 /* Build configuration list for PBXNativeTarget "Turnstile-iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				D821C5221C68A6C200A88B65 /* Debug */,
@@ -413,6 +709,33 @@
 			buildConfigurations = (
 				D821C5251C68A6C200A88B65 /* Debug */,
 				D821C5261C68A6C200A88B65 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8A7D8691C7D3B9500A2981D /* Build configuration list for PBXNativeTarget "Turnstile-tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8A7D86A1C7D3B9500A2981D /* Debug */,
+				D8A7D86B1C7D3B9500A2981D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8A7D8781C7D3D3800A2981D /* Build configuration list for PBXNativeTarget "Turnstile-watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8A7D8791C7D3D3800A2981D /* Debug */,
+				D8A7D87A1C7D3D3800A2981D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D8A7D8871C7D3DE200A2981D /* Build configuration list for PBXNativeTarget "Turnstile-OSX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D8A7D8881C7D3DE200A2981D /* Debug */,
+				D8A7D8891C7D3DE200A2981D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

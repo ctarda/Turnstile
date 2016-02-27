@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D821C50C1C68A6C200A88B65"
-               BuildableName = "Turnstile.framework"
-               BlueprintName = "Turnstile"
+               BlueprintIdentifier = "D8A7D87D1C7D3DE200A2981D"
+               BuildableName = "Turnstile-OSX.framework"
+               BlueprintName = "Turnstile-OSX"
                ReferencedContainer = "container:Turnstile.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -26,29 +26,9 @@
       buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
-      shouldUseLaunchSchemeArgsEnv = "YES"
-      codeCoverageEnabled = "YES">
+      shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "D821C5161C68A6C200A88B65"
-               BuildableName = "TurnstileTests.xctest"
-               BlueprintName = "TurnstileTests"
-               ReferencedContainer = "container:Turnstile.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
-      <MacroExpansion>
-         <BuildableReference
-            BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D821C50C1C68A6C200A88B65"
-            BuildableName = "Turnstile.framework"
-            BlueprintName = "Turnstile"
-            ReferencedContainer = "container:Turnstile.xcodeproj">
-         </BuildableReference>
-      </MacroExpansion>
       <AdditionalOptions>
       </AdditionalOptions>
    </TestAction>
@@ -65,9 +45,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D821C50C1C68A6C200A88B65"
-            BuildableName = "Turnstile.framework"
-            BlueprintName = "Turnstile"
+            BlueprintIdentifier = "D8A7D87D1C7D3DE200A2981D"
+            BuildableName = "Turnstile-OSX.framework"
+            BlueprintName = "Turnstile-OSX"
             ReferencedContainer = "container:Turnstile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -83,9 +63,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "D821C50C1C68A6C200A88B65"
-            BuildableName = "Turnstile.framework"
-            BlueprintName = "Turnstile"
+            BlueprintIdentifier = "D8A7D87D1C7D3DE200A2981D"
+            BuildableName = "Turnstile-OSX.framework"
+            BlueprintName = "Turnstile-OSX"
             ReferencedContainer = "container:Turnstile.xcodeproj">
          </BuildableReference>
       </MacroExpansion>

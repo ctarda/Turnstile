@@ -82,6 +82,28 @@ public class StateMachine <T: Hashable> {
         return currentState == state 
     }
     
+    public func canTransitionTo(state: State<T>) -> Bool {
+        guard running && isExistingState(state) else {
+            return false
+        }
+        
+        let posibleEvents = events.filter({[unowned self] event in event.sourceStates.contains(self.currentState) })
+        for transition in posibleEvents {
+            if transition.destinationState == state {
+                return true
+            }
+        }
+
+        return false
+    }
+    
+    public func canFireEvent(event: Event<T>) -> Bool {
+        guard running && isExistingEvent(event) else {
+            return false
+        }
+        return event.sourceStates.contains(currentState)
+    }
+    
     private func checkMachineIntegrity() -> Bool {
         return checkStateCount() && checkEventCount() && checkEventsIntegrity()
     }
