@@ -7,6 +7,9 @@
 
 import Foundation
 
+/**
+ A StateMachine aggregates states. It will transition from one state to another when events are triggered, according to the destination state of those events
+*/
 public class StateMachine <T: Hashable> {
     
     private(set) public final var initialState: State<T>
@@ -26,35 +29,55 @@ public class StateMachine <T: Hashable> {
         self.init(initialState: initialState)
         self.states.appendContentsOf(states)
     }
-    
+    /**
+     Checks if the state machine contains a given state
+    */
     public func isExistingState(state: State<T>) -> Bool {
         return states.contains(state)
     }
     
+    /**
+     Adds a state to the state machine. Fails silently if the state had been previously added to the machine.
+    */
     public func addState(state: State<T>) {
         if !isExistingState(state) {
             states.append(state)
         }
     }
     
+    /**
+     Adds an array of states to the machine, ignoring those that han been added to the machine already
+    */
     public func addStates(states: [State<T>]) {
-        self.states.appendContentsOf(states.filter({!self.states.contains($0)}))
+        self.states.appendContentsOf(states.filter({!isExistingState($0)}))
     }
     
+    /**
+     Checks if the state machine contains a given event
+    */
     public func isExistingEvent(event: Event<T>) -> Bool {
         return events.contains(event)
     }
     
+    /**
+     Adds an event to the state machine, failing silently if the event had been added already
+    */
     public func addEvent(event: Event<T>) {
         if !isExistingEvent(event) {
             events.append(event)
         }
     }
     
+    /**
+     Adds an array of events to the machine, ignoring those that han been added to the machine already
+     */
     public func addEvents(events: [Event<T>]) {
-        self.events.appendContentsOf(events.filter({!self.events.contains($0)}))
+        self.events.appendContentsOf(events.filter({!isExistingEvent($0)}))
     }
     
+    /**
+     Check if the state machine is currently at a particular state
+    */
     public func isInState(state:State<T>) -> Bool {
         return currentState == state 
     }
@@ -108,6 +131,9 @@ public class StateMachine <T: Hashable> {
         return events.count != 0
     }
     
+    /**
+     Starts the state machine. Returns a boolean that indicates if the machine is running.
+    */
     public func start() -> Bool {
         running = checkMachineIntegrity()
         if running {
@@ -116,10 +142,16 @@ public class StateMachine <T: Hashable> {
         return running
     }
     
+    /**
+     Indicates if the machine is running
+    */
     public func isRunning() -> Bool {
         return running
     }
     
+    /**
+     Fire an event. Returns the result of the event.
+    */
     public func fireEvent(event: Event<T>) -> Transition {
         if !running || !checkEventIntegrity(event) {
             return .Inconsistent
@@ -128,6 +160,9 @@ public class StateMachine <T: Hashable> {
         return fireEventByName(event.name)
     }
     
+    /**
+     Fire an event. Returns the result of the event.
+     */
     private func fireEventByName(eventName: String) -> Transition {
         if let event = eventWithName(eventName) {
             let sourceStates = event.sourceStates
@@ -145,6 +180,9 @@ public class StateMachine <T: Hashable> {
         }
     }
     
+    /**
+     Returns an event as an optional
+    */
     private func eventWithName(name: String) -> Event<T>? {
         return events.filter { (element) -> Bool in
             return element.name == name

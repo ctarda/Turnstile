@@ -6,7 +6,9 @@
 //
 
 import Foundation
-
+/**
+ A state is a description of the status of a system at a given moment in time, while it is waiting to execute a _transition_
+*/
 public class State <T: Hashable> {
 
     private(set) final public var value: T
