@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "D8A7D87D1C7D3DE200A2981D"
-               BuildableName = "Turnstile-OSX.framework"
+               BuildableName = "Turnstile.framework"
                BlueprintName = "Turnstile-OSX"
                ReferencedContainer = "container:Turnstile.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D8A7D87D1C7D3DE200A2981D"
-            BuildableName = "Turnstile-OSX.framework"
+            BuildableName = "Turnstile.framework"
             BlueprintName = "Turnstile-OSX"
             ReferencedContainer = "container:Turnstile.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "D8A7D87D1C7D3DE200A2981D"
-            BuildableName = "Turnstile-OSX.framework"
+            BuildableName = "Turnstile.framework"
             BlueprintName = "Turnstile-OSX"
             ReferencedContainer = "container:Turnstile.xcodeproj">
          </BuildableReference>
