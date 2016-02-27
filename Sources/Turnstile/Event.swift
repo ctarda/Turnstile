@@ -6,7 +6,9 @@
 //
 
 import Foundation
-
+/**
+ Events trigger _transitions_ from one _state_ to another. Events link source states with and destination state.
+*/
 public class Event <T:Hashable> {
     
     private(set) public final var name: String
