@@ -12,6 +12,9 @@ import Foundation
 */
 public class StateMachine <T: Hashable> {
     
+	/**
+		The State Machine's initial Event. Read-only.s
+	*/
     private(set) public final var initialState: State<T>
     private final lazy var states : [State<T>] = []
     private final lazy var events : [Event<T>] = []
@@ -97,6 +100,11 @@ public class StateMachine <T: Hashable> {
         return false
     }
     
+	/**
+		Checks if it possible to trigger a given Event. In order to trigger
+		an Event, the State Machine must be running, and the Event must have
+		been registered with it
+	*/
     public func canFireEvent(event: Event<T>) -> Bool {
         guard running && isExistingEvent(event) else {
             return false
@@ -160,9 +168,6 @@ public class StateMachine <T: Hashable> {
         return fireEventByName(event.name)
     }
     
-    /**
-     Fire an event. Returns the result of the event.
-     */
     private func fireEventByName(eventName: String) -> Transition {
         if let event = eventWithName(eventName) {
             let sourceStates = event.sourceStates
@@ -180,9 +185,6 @@ public class StateMachine <T: Hashable> {
         }
     }
     
-    /**
-     Returns an event as an optional
-    */
     private func eventWithName(name: String) -> Event<T>? {
         return events.filter { (element) -> Bool in
             return element.name == name
