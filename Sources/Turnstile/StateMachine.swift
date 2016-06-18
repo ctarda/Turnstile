@@ -30,19 +30,19 @@ public class StateMachine <T: Hashable> {
     convenience public init(initialState: State<T>, states: [State<T>])
     {
         self.init(initialState: initialState)
-        self.states.appendContentsOf(states)
+        self.states.append(contentsOf: states)
     }
     /**
      Checks if the state machine contains a given state
     */
-    public func isExistingState(state: State<T>) -> Bool {
+    public func isExistingState(_ state: State<T>) -> Bool {
         return states.contains(state)
     }
     
     /**
      Adds a state to the state machine. Fails silently if the state had been previously added to the machine.
     */
-    public func addState(state: State<T>) {
+    public func addState(_ state: State<T>) {
         if !isExistingState(state) {
             states.append(state)
         }
@@ -51,21 +51,21 @@ public class StateMachine <T: Hashable> {
     /**
      Adds an array of states to the machine, ignoring those that han been added to the machine already
     */
-    public func addStates(states: [State<T>]) {
-        self.states.appendContentsOf(states.filter({!isExistingState($0)}))
+    public func addStates(_ states: [State<T>]) {
+        self.states.append(contentsOf: states.filter({!isExistingState($0)}))
     }
     
     /**
      Checks if the state machine contains a given event
     */
-    public func isExistingEvent(event: Event<T>) -> Bool {
+    public func isExistingEvent(_ event: Event<T>) -> Bool {
         return events.contains(event)
     }
     
     /**
      Adds an event to the state machine, failing silently if the event had been added already
     */
-    public func addEvent(event: Event<T>) {
+    public func addEvent(_ event: Event<T>) {
         if !isExistingEvent(event) {
             events.append(event)
         }
@@ -74,18 +74,18 @@ public class StateMachine <T: Hashable> {
     /**
      Adds an array of events to the machine, ignoring those that han been added to the machine already
      */
-    public func addEvents(events: [Event<T>]) {
-        self.events.appendContentsOf(events.filter({!isExistingEvent($0)}))
+    public func addEvents(_ events: [Event<T>]) {
+        self.events.append(contentsOf: events.filter({!isExistingEvent($0)}))
     }
     
     /**
      Check if the state machine is currently at a particular state
     */
-    public func isInState(state:State<T>) -> Bool {
+    public func isInState(_ state:State<T>) -> Bool {
         return currentState == state 
     }
     
-    public func canTransitionTo(state: State<T>) -> Bool {
+    public func canTransitionTo(_ state: State<T>) -> Bool {
         guard running && isExistingState(state) else {
             return false
         }
@@ -105,7 +105,7 @@ public class StateMachine <T: Hashable> {
 		an Event, the State Machine must be running, and the Event must have
 		been registered with it
 	*/
-    public func canFireEvent(event: Event<T>) -> Bool {
+    public func canFireEvent(_ event: Event<T>) -> Bool {
         guard running && isExistingEvent(event) else {
             return false
         }
@@ -120,14 +120,14 @@ public class StateMachine <T: Hashable> {
         return events.map({[unowned self] event in self.checkEventIntegrity(event)}).reduce(true){(sum, next) in return sum && next}
     }
     
-    private func checkEventIntegrity(event: Event<T>) -> Bool {
+    private func checkEventIntegrity(_ event: Event<T>) -> Bool {
         let sourceStates = event.sourceStates
         let destinationState = event.destinationState
         
         return isExistingState(destinationState) && checkStatesIntegrity(sourceStates)
     }
     
-    private func checkStatesIntegrity(states: [State<T>]) -> Bool {
+    private func checkStatesIntegrity(_ states: [State<T>]) -> Bool {
         return states.map({[unowned self] state in self.isExistingState(state)}).reduce(true){(sum, next) in return sum && next}
     }
     
@@ -160,15 +160,15 @@ public class StateMachine <T: Hashable> {
     /**
      Fire an event. Returns the result of the event.
     */
-    public func fireEvent(event: Event<T>) -> Transition {
+    public func fireEvent(_ event: Event<T>) -> Transition {
         if !running || !checkEventIntegrity(event) {
-            return .Inconsistent
+            return .inconsistent
         }
         
         return fireEventByName(event.name)
     }
     
-    private func fireEventByName(eventName: String) -> Transition {
+    private func fireEventByName(_ eventName: String) -> Transition {
         if let event = eventWithName(eventName) {
             let sourceStates = event.sourceStates
             let destinationState = event.destinationState
@@ -176,22 +176,22 @@ public class StateMachine <T: Hashable> {
             if sourceStates.contains(currentState){
                 activateState(destinationState)
                 
-                return .Completed
+                return .completed
             }
             
-            return .Inconsistent
+            return .inconsistent
         } else {
-            return .Declined
+            return .declined
         }
     }
     
-    private func eventWithName(name: String) -> Event<T>? {
+    private func eventWithName(_ name: String) -> Event<T>? {
         return events.filter { (element) -> Bool in
             return element.name == name
             }.first
     }
     
-    private func activateState(state: State<T>) {
+    private func activateState(_ state: State<T>) {
         state.willEnterState?(finalState: state)
         currentState.willExitState?(initialState: currentState)
 
@@ -203,7 +203,7 @@ public class StateMachine <T: Hashable> {
         oldState?.didExitState?(initialState: oldState!)
     }
     
-    private func stateWithValue(value: T) -> State<T>? {
+    private func stateWithValue(_ value: T) -> State<T>? {
         return states.filter { (element) -> Bool in
             return element.value == value
             }.first

@@ -145,7 +145,7 @@ class StateMachineTests: XCTestCase {
         
         let transitionResult = stateMachine!.fireEvent(event)
         
-        XCTAssertTrue(transitionResult == .Inconsistent, "An event shall not be fired if the state machine is not in the proper state")
+        XCTAssertTrue(transitionResult == .inconsistent, "An event shall not be fired if the state machine is not in the proper state")
     }
     
     func testFireEventFailsIfMachineIsNotStarted() {
@@ -153,7 +153,7 @@ class StateMachineTests: XCTestCase {
 
         let transitionResult = stateMachine!.fireEvent(Constants.event1)
         
-        XCTAssertTrue(transitionResult == .Inconsistent, "An event shall not be fired if the state machine is not started")
+        XCTAssertTrue(transitionResult == .inconsistent, "An event shall not be fired if the state machine is not started")
     }
     
     func testMachineShouldBeInState2AfterEventFromState1ToState2() {
@@ -162,7 +162,7 @@ class StateMachineTests: XCTestCase {
         
         let transitionResult = stateMachine!.fireEvent(Constants.event1)
         
-        XCTAssertTrue(transitionResult == .Completed && stateMachine!.isInState(Constants.state2), "An event from state1 to state 2 should leave machine in state 2")
+        XCTAssertTrue(transitionResult == .completed && stateMachine!.isInState(Constants.state2), "An event from state1 to state 2 should leave machine in state 2")
     }
     
     func testWillEnterStateGetsFired() {
