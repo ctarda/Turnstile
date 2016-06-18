@@ -12,15 +12,15 @@ public enum Transition {
 	/**
 		The Event completed successfully
 	*/
-    case Completed    
+    case completed    
 	/**
 		The Event was declined by the State Machine because
 		The State Machine could not find this Event registered with it.
 	*/
-    case Declined
+    case declined
 	/**
 		The State Machine is in an State that is not registered as a
 		Source State with the Event.
 	*/
-    case Inconsistent
+    case inconsistent
 }
