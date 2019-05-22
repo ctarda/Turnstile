@@ -40,7 +40,7 @@ class StateTests: XCTestCase {
         var result = false
         
         state!.willEnterState = { state in result = true }
-        state!.willEnterState?(finalState: state!)
+        state!.willEnterState?(state!)
         
         XCTAssertTrue(result, "willEnterState must be set")
     }
@@ -49,7 +49,7 @@ class StateTests: XCTestCase {
         var result = false
         
         state!.didEnterState = { state in result = true }
-        state!.didEnterState?(finalState: state!)
+        state!.didEnterState?(state!)
         
         XCTAssertTrue(result, "didEnterState must be set")
     }
@@ -58,7 +58,7 @@ class StateTests: XCTestCase {
         var result = false
         
         state!.willExitState = { state in result = true }
-        state!.willExitState?(initialState: state!)
+        state!.willExitState?(state!)
         
         XCTAssertTrue(result, "willExitState must be set")
     }
@@ -67,7 +67,7 @@ class StateTests: XCTestCase {
         var result = false
         
         state!.didExitState = { state in result = true }
-        state!.didExitState?(initialState: state!)
+        state!.didExitState?(state!)
         
         XCTAssertTrue(result, "willExitState must be set")
     }
