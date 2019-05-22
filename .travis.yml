@@ -1,5 +1,5 @@
 language: swift
 osx_image: xcode10
 xcode_project: Turnstile.xcodeproj
-xcode_scheme: Turnstile
+xcode_scheme: Turnstile-iOS
 xcode_sdk: iphonesimulator
