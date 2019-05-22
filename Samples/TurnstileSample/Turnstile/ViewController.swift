@@ -19,19 +19,19 @@ class ViewController: UIViewController, RegularDayObserver {
         return RegularDay(observer: self)
     }()
     
-    @IBAction func ringAlarm(sender: AnyObject) {
+    @IBAction func ringAlarm() {
         myDay.getUp()
     }
     
-    @IBAction func brewTea(sender: AnyObject) {
+    @IBAction func brewTea() {
         myDay.brewTea()
     }
     
-    @IBAction func goToWork(sender: AnyObject) {
+    @IBAction func goToWork() {
         myDay.goToWork()
     }
     
-    @IBAction func fleeOffice(sender: AnyObject) {
+    @IBAction func fleeOffice() {
         myDay.fleeOffice()
     }
     
@@ -43,10 +43,10 @@ class ViewController: UIViewController, RegularDayObserver {
     
     func newEvent(message: String) {
         status?.text = message
-        ringAlarmButton?.enabled = myDay.canGetUp()
-        brewTeaButton?.enabled = myDay.canBrewTea()
-        goToWorkButton?.enabled = myDay.canGoToWork()
-        fleeOfficeButton?.enabled = myDay.canFleeOffice()
+        ringAlarmButton?.isEnabled = myDay.canGetUp()
+        brewTeaButton?.isEnabled = myDay.canBrewTea()
+        goToWorkButton?.isEnabled = myDay.canGoToWork()
+        fleeOfficeButton?.isEnabled = myDay.canFleeOffice()
     }
 }
 

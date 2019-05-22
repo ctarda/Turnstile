@@ -192,15 +192,15 @@ public class StateMachine <T: Hashable> {
     }
     
     private func activateState(_ state: State<T>) {
-        state.willEnterState?(finalState: state)
-        currentState.willExitState?(initialState: currentState)
+        state.willEnterState?(state)
+        currentState.willExitState?(currentState)
 
         let oldState = stateWithValue(currentState.value)
         
         currentState = state
         
-        currentState.didEnterState?(finalState: currentState)
-        oldState?.didExitState?(initialState: oldState!)
+        currentState.didEnterState?(currentState)
+        oldState?.didExitState?(oldState!)
     }
     
     private func stateWithValue(_ value: T) -> State<T>? {

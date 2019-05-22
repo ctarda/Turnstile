@@ -19,25 +19,25 @@ public class State <T: Hashable> {
 		Closure to be called right before the State Machine
 		enters a given State
 	*/
-    final public var willEnterState: ((finalState : State<T>) -> Void)?
+    final public var willEnterState: ((_ finalState : State<T>) -> Void)?
 	
 	/**
 		Closure to be called right after the State Machine
 		enters a given State
 	*/	
-    final public var didEnterState: ((finalState : State<T>) -> Void)?
+    final public var didEnterState: ((_ finalState : State<T>) -> Void)?
 	
 	/**
 		Closure to be called right before the State Machine
 		exits a given State
 	*/	
-    final public var willExitState: ((initialState : State<T>) -> Void)?
+    final public var willExitState: ((_ initialState : State<T>) -> Void)?
 	
 	/**
 		Closure to be called right after the State Machine
 		exists a given State
 	*/	
-    final public var didExitState: ((initialState : State<T>) -> Void)?
+    final public var didExitState: ((_ initialState : State<T>) -> Void)?
     
     public init(value: T) {
         self.value = value

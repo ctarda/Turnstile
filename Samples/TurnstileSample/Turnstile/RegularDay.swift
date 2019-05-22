@@ -45,15 +45,15 @@ final class RegularDay {
     private func setupStateMachine() {
         stateMachine.addEvents([Transitions.alarmRings, Transitions.teaIsReady, Transitions.timeToLeaveForWork, Transitions.timeToPlay])
         
-        States.sleepState.didEnterState = {state in self.observer.newEvent("Zzzzzzzzzzz") }
-        States.grumpyNotSleepingButYetNotAwake.didEnterState = {state in self.observer.newEvent("In need my tea...")}
-        States.notSoGrumpyAndAwake.didEnterState = {state in self.observer.newEvent("Meh")}
-        States.totallyGrumpy.didEnterState = {state in self.observer.newEvent("Android, LOL!")}
-        States.totallyHappyLifeIsAwesome.didEnterState = {state in self.observer.newEvent("Oh, look! A unicorn!")}
+        States.sleepState.didEnterState = {state in self.observer.newEvent(message: "Zzzzzzzzzzz") }
+        States.grumpyNotSleepingButYetNotAwake.didEnterState = {state in self.observer.newEvent(message: "In need my tea...")}
+        States.notSoGrumpyAndAwake.didEnterState = {state in self.observer.newEvent(message: "Meh")}
+        States.totallyGrumpy.didEnterState = {state in self.observer.newEvent(message: "Android, LOL!")}
+        States.totallyHappyLifeIsAwesome.didEnterState = {state in self.observer.newEvent(message: "Oh, look! A unicorn!")}
     }
     
     func start() {
-        stateMachine.start()
+        let _ = stateMachine.start()
     }
     
     func canGetUp() -> Bool {
@@ -61,7 +61,7 @@ final class RegularDay {
     }
 
     func getUp() {
-        stateMachine.fireEvent(Transitions.alarmRings)
+        let _ = stateMachine.fireEvent(Transitions.alarmRings)
     }
     
     func canBrewTea() -> Bool {
@@ -69,7 +69,7 @@ final class RegularDay {
     }
     
     func brewTea() {
-        stateMachine.fireEvent(Transitions.teaIsReady)
+        let _ = stateMachine.fireEvent(Transitions.teaIsReady)
     }
     
     func canGoToWork() -> Bool {
@@ -77,7 +77,7 @@ final class RegularDay {
     }
     
     func goToWork() {
-        stateMachine.fireEvent(Transitions.timeToLeaveForWork)
+        let _ = stateMachine.fireEvent(Transitions.timeToLeaveForWork)
     }
     
     func canFleeOffice() -> Bool {
@@ -86,6 +86,6 @@ final class RegularDay {
     }
     
     func fleeOffice() {
-        stateMachine.fireEvent(Transitions.timeToPlay)
+        let _ = stateMachine.fireEvent(Transitions.timeToPlay)
     }
 }

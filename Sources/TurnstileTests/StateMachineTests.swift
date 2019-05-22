@@ -141,7 +141,7 @@ class StateMachineTests: XCTestCase {
     func testFireEventFailsTransitionWhenStateMachineIsNotInDestionationState() {
         let event = Event(name: Constants.stringDiff, sourceStates: [Constants.state3], destinationState: Constants.state1)
         stateMachine?.addEvent(event)
-        stateMachine!.start()
+        let _ = stateMachine!.start()
         
         let transitionResult = stateMachine!.fireEvent(event)
         
@@ -158,7 +158,7 @@ class StateMachineTests: XCTestCase {
     
     func testMachineShouldBeInState2AfterEventFromState1ToState2() {
         stateMachine?.addEvent(Constants.event1)
-        stateMachine!.start()
+        let _ = stateMachine!.start()
         
         let transitionResult = stateMachine!.fireEvent(Constants.event1)
         
@@ -175,9 +175,9 @@ class StateMachineTests: XCTestCase {
         oneStateMachine.addState(state2)
         oneStateMachine.addEvent(event)
         
-        oneStateMachine.start()
+        let _ = oneStateMachine.start()
         
-        oneStateMachine.fireEvent(event)
+        let _ = oneStateMachine.fireEvent(event)
         
         XCTAssertTrue(stateEntered, "The state machine will run the proper closure before entering a state")
     }
@@ -192,9 +192,9 @@ class StateMachineTests: XCTestCase {
         oneStateMachine.addState(state2)
         oneStateMachine.addEvent(event)
         
-        oneStateMachine.start()
+        let _ = oneStateMachine.start()
         
-        oneStateMachine.fireEvent(event)
+        let _ = oneStateMachine.fireEvent(event)
         
         XCTAssertTrue(stateEntered, "The state machine will run the proper closure when entering a state")
     }
@@ -210,9 +210,9 @@ class StateMachineTests: XCTestCase {
         oneStateMachine.addState(state2)
         oneStateMachine.addEvent(event)
         
-        oneStateMachine.start()
+        let _ = oneStateMachine.start()
         
-        oneStateMachine.fireEvent(event)
+        let _ = oneStateMachine.fireEvent(event)
         
         XCTAssertTrue(stateEntered, "The state machine will run the proper closure before exiting a state")
     }
@@ -228,9 +228,9 @@ class StateMachineTests: XCTestCase {
         oneStateMachine.addState(state2)
         oneStateMachine.addEvent(event)
         
-        oneStateMachine.start()
+        let _ = oneStateMachine.start()
         
-        oneStateMachine.fireEvent(event)
+        let _ = oneStateMachine.fireEvent(event)
         
         XCTAssertTrue(stateEntered, "The state machine will run the proper closure after exiting a state")
     }
@@ -252,19 +252,19 @@ class StateMachineTests: XCTestCase {
     func testMachineTransitionIsNotAllowedToInexistantStates() {
         let sut = partialStateMachine()
         let state4 = State(value: Constants.stringDiff)
-        sut.start()
+        let _ = sut.start()
         XCTAssertFalse(sut.canTransitionTo(state4), "If the destination state is not configured into the state machine, the transition is not allowed")
     }
         
     func testMachineCanSayIfATransitionIsCurrentlyAllowed() {
         let sut = partialStateMachine()
-        sut.start()
+        let _ = sut.start()
         XCTAssertTrue(sut.canTransitionTo(Constants.state2), "A transition is allowed if we are in the source state of some event that transition to destination state")
     }
     
     func testMachineCanSayIfATransitionIsCurrentlyNotAllowed() {
         let sut = partialStateMachine()
-        sut.start()
+        let _ = sut.start()
         XCTAssertFalse(sut.canTransitionTo(Constants.state3), "A transition is not allowed if we are in the source state none event that transition to destination state")
     }
     
@@ -276,20 +276,20 @@ class StateMachineTests: XCTestCase {
     func testMachineCanNotFireNonExistantEvents() {
         let sut = partialStateMachine()
         let event32 = Event(name: Constants.stringDiff, sourceStates: [Constants.state3], destinationState: Constants.state2)
-        sut.start()
+        let _ = sut.start()
         XCTAssertFalse(sut.canFireEvent(event32), "Inexistant events can't be fired")
     }
     
     func testMachineCanFireEventsFromSourceState() {
         let sut = partialStateMachine()
-        sut.start()
+        let _ = sut.start()
         XCTAssertTrue(sut.canFireEvent(Constants.event1), "Can fire event from source state")
     }
     
     func testMachineCanNotFireEventsFromOtherState() {
         let sut = partialStateMachine()
-        sut.start()
-        sut.fireEvent(Constants.event1)
+        let _ = sut.start()
+        let _ = sut.fireEvent(Constants.event1)
         XCTAssertFalse(sut.canFireEvent(Constants.event1), "Can't fire event from a state that is not part of the event's sourceStates ")
     }
 
