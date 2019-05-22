@@ -43,10 +43,10 @@ class ViewController: UIViewController, RegularDayObserver {
     
     func newEvent(message: String) {
         status?.text = message
-        ringAlarmButton?.enabled = myDay.canGetUp()
-        brewTeaButton?.enabled = myDay.canBrewTea()
-        goToWorkButton?.enabled = myDay.canGoToWork()
-        fleeOfficeButton?.enabled = myDay.canFleeOffice()
+        ringAlarmButton?.isEnabled = myDay.canGetUp()
+        brewTeaButton?.isEnabled = myDay.canBrewTea()
+        goToWorkButton?.isEnabled = myDay.canGoToWork()
+        fleeOfficeButton?.isEnabled = myDay.canFleeOffice()
     }
 }
 
