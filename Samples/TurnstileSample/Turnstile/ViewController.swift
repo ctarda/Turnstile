@@ -19,19 +19,19 @@ class ViewController: UIViewController, RegularDayObserver {
         return RegularDay(observer: self)
     }()
     
-    @IBAction func ringAlarm(sender: AnyObject) {
+    @IBAction func ringAlarm() {
         myDay.getUp()
     }
     
-    @IBAction func brewTea(sender: AnyObject) {
+    @IBAction func brewTea() {
         myDay.brewTea()
     }
     
-    @IBAction func goToWork(sender: AnyObject) {
+    @IBAction func goToWork() {
         myDay.goToWork()
     }
     
-    @IBAction func fleeOffice(sender: AnyObject) {
+    @IBAction func fleeOffice() {
         myDay.fleeOffice()
     }
     
